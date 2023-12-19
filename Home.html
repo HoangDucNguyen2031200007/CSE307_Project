@@ -13,7 +13,11 @@
     <title>EIU Smart Warehouse</title>
 
     <!-- Custom fonts for this template-->
-    <link href="css/all.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
       rel="stylesheet"
@@ -36,8 +40,14 @@
           class="sidebar-brand d-flex align-items-center justify-content-center"
           href="Home.html"
         >
-          <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+          <div class="sidebar-brand-icon">
+            <!-- <i class="fas fa-laugh-wink"></i> -->
+            <img
+              src="img/EIULogo.webp"
+              alt="EIULogo"
+              width="40px"
+              height="40px"
+            />
           </div>
           <div class="sidebar-brand-text mx-3">EIU Warehouse</div>
         </a>
@@ -48,7 +58,7 @@
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
           <a class="nav-link" href="Home.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fa fa-home" aria-hidden="true"></i>
             <span>Home</span></a
           >
         </li>
@@ -57,120 +67,103 @@
         <hr class="sidebar-divider" />
 
         <!-- Heading -->
-        <div class="sidebar-heading">Interface</div>
-
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            href="#"
-            data-toggle="collapse"
-            data-target="#collapseTwo"
-            aria-expanded="true"
-            aria-controls="collapseTwo"
-          >
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Components</span>
-          </a>
-          <div
-            id="collapseTwo"
-            class="collapse"
-            aria-labelledby="headingTwo"
-            data-parent="#accordionSidebar"
-          >
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Custom Components:</h6>
-              <a class="collapse-item" href="buttons.html">Buttons</a>
-              <a class="collapse-item" href="cards.html">Cards</a>
-            </div>
-          </div>
-        </li>
-
-        <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            href="#"
-            data-toggle="collapse"
-            data-target="#collapseUtilities"
-            aria-expanded="true"
-            aria-controls="collapseUtilities"
-          >
-            <i class="fas fa-fw fa-wrench"></i>
-            <span>Utilities</span>
-          </a>
-          <div
-            id="collapseUtilities"
-            class="collapse"
-            aria-labelledby="headingUtilities"
-            data-parent="#accordionSidebar"
-          >
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Custom Utilities:</h6>
-              <a class="collapse-item" href="utilities-color.html">Colors</a>
-              <a class="collapse-item" href="utilities-border.html">Borders</a>
-              <a class="collapse-item" href="utilities-animation.html"
-                >Animations</a
-              >
-              <a class="collapse-item" href="utilities-other.html">Other</a>
-            </div>
-          </div>
-        </li>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider" />
-
-        <!-- Heading -->
-        <div class="sidebar-heading">Addons</div>
-
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            href="#"
-            data-toggle="collapse"
-            data-target="#collapsePages"
-            aria-expanded="true"
-            aria-controls="collapsePages"
-          >
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
-          </a>
-          <div
-            id="collapsePages"
-            class="collapse"
-            aria-labelledby="headingPages"
-            data-parent="#accordionSidebar"
-          >
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Login Screens:</h6>
-              <a class="collapse-item" href="login.html">Login</a>
-              <a class="collapse-item" href="register.html">Register</a>
-              <a class="collapse-item" href="forgot-password.html"
-                >Forgot Password</a
-              >
-              <div class="collapse-divider"></div>
-              <h6 class="collapse-header">Other Pages:</h6>
-              <a class="collapse-item" href="404.html">404 Page</a>
-              <a class="collapse-item" href="blank.html">Blank Page</a>
-            </div>
-          </div>
-        </li>
+        <div class="sidebar-heading">Tables</div>
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
           <a class="nav-link" href="charts.html">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a
+            <span>Statistics</span></a
           >
         </li>
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-          <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseProducts"
+            aria-expanded="true"
+            aria-controls="collapseProducts"
           >
+            <i class="fa fa-database" aria-hidden="true"></i>
+            <span>Products</span>
+          </a>
+          <div
+            id="collapseProducts"
+            class="collapse"
+            aria-labelledby="headingProducts"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="tables1.html">Product List</a>
+              <a class="collapse-item" href="newProduct.html"
+                >Add new Product</a
+              >
+              <a class="collapse-item" href="updateProduct.html"
+                >Update Product</a
+              >
+            </div>
+          </div>
+        </li>
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseCustomers"
+            aria-expanded="true"
+            aria-controls="collapseCustomers"
+          >
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            <span>Customers</span>
+          </a>
+          <div
+            id="collapseCustomers"
+            class="collapse"
+            aria-labelledby="headingCustomers"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="tables2.html">Customer List</a>
+              <a class="collapse-item" href="newCustomer.html"
+                >Add new Customer</a
+              >
+              <a class="collapse-item" href="updateCustomer.html"
+                >Update Customer</a
+              >
+            </div>
+          </div>
+        </li>
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseWarehouse"
+            aria-expanded="true"
+            aria-controls="collapseWarehouse"
+          >
+            <i class="fas fa-fw fa-table"></i>
+            <span>Warehouse</span>
+          </a>
+          <div
+            id="collapseWarehouse"
+            class="collapse"
+            aria-labelledby="headingWarehouse"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="tables3.html">Warehouse</a>
+              <a class="collapse-item" href="newBlock.html">Add new Block</a>
+              <a class="collapse-item" href="updateBlock.html">Update Block</a>
+            </div>
+          </div>
         </li>
 
         <!-- Divider -->
@@ -286,7 +279,7 @@
                       </div>
                     </div>
                     <div>
-                      <div class="small text-gray-500">December 12, 2019</div>
+                      <div class="small text-gray-500">December 12, 2023</div>
                       <span class="font-weight-bold"
                         >A new monthly report is ready to download!</span
                       >
@@ -299,7 +292,7 @@
                       </div>
                     </div>
                     <div>
-                      <div class="small text-gray-500">December 7, 2019</div>
+                      <div class="small text-gray-500">December 7, 2023</div>
                       $290.29 has been deposited into your account!
                     </div>
                   </a>
@@ -310,7 +303,7 @@
                       </div>
                     </div>
                     <div>
-                      <div class="small text-gray-500">December 2, 2019</div>
+                      <div class="small text-gray-500">December 2, 2023</div>
                       Spending Alert: We've noticed unusually high spending for
                       your account.
                     </div>
@@ -437,7 +430,7 @@
                   aria-expanded="false"
                 >
                   <span class="mr-2 d-none d-lg-inline text-gray-600 small"
-                    >Douglas McGee</span
+                    >Nguyen Hoang Duc</span
                   >
                   <img
                     class="img-profile rounded-circle"
@@ -490,7 +483,7 @@
                 href="#"
                 class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
                 ><i class="fas fa-download fa-sm text-white-50"></i> Generate
-                Report</a
+                Order</a
               >
             </div>
 
@@ -505,14 +498,32 @@
                         <div
                           class="text-xs font-weight-bold text-primary text-uppercase mb-1"
                         >
-                          Earnings (Monthly)
+                          Occupied Storage Overall
                         </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          $40,000
+                        <div class="row no-gutters align-items-center">
+                          <div class="col-auto">
+                            <div
+                              class="h5 mb-0 mr-3 font-weight-bold text-gray-800"
+                            >
+                              12%
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm mr-2">
+                              <div
+                                class="progress-bar bg-primary"
+                                role="progressbar"
+                                style="width: 12%"
+                                aria-valuenow="50"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       <div class="col-auto">
-                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        <i class="fas fa-warehouse fa-2x text-gray-300"></i>
                       </div>
                     </div>
                   </div>
@@ -528,14 +539,32 @@
                         <div
                           class="text-xs font-weight-bold text-success text-uppercase mb-1"
                         >
-                          Earnings (Annual)
+                          Average Occupied Storage
                         </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          $215,000
+                        <div class="row no-gutters align-items-center">
+                          <div class="col-auto">
+                            <div
+                              class="h5 mb-0 mr-3 font-weight-bold text-gray-800"
+                            >
+                              3%
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm mr-2">
+                              <div
+                                class="progress-bar bg-success"
+                                role="progressbar"
+                                style="width: 3%"
+                                aria-valuenow="50"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       <div class="col-auto">
-                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                        <i class="fas fa-columns fa-2x text-gray-300"></i>
                       </div>
                     </div>
                   </div>
@@ -551,14 +580,14 @@
                         <div
                           class="text-xs font-weight-bold text-info text-uppercase mb-1"
                         >
-                          Tasks
+                          Import Tasks
                         </div>
                         <div class="row no-gutters align-items-center">
                           <div class="col-auto">
                             <div
                               class="h5 mb-0 mr-3 font-weight-bold text-gray-800"
                             >
-                              50%
+                              65%
                             </div>
                           </div>
                           <div class="col">
@@ -566,7 +595,7 @@
                               <div
                                 class="progress-bar bg-info"
                                 role="progressbar"
-                                style="width: 50%"
+                                style="width: 65%"
                                 aria-valuenow="50"
                                 aria-valuemin="0"
                                 aria-valuemax="100"
@@ -594,10 +623,10 @@
                         <div
                           class="text-xs font-weight-bold text-warning text-uppercase mb-1"
                         >
-                          Pending Requests
+                          Pending Orders
                         </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          18
+                          5
                         </div>
                       </div>
                       <div class="col-auto">
@@ -620,7 +649,7 @@
                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
                   >
                     <h6 class="m-0 font-weight-bold text-primary">
-                      Earnings Overview
+                      Warehouse Capacity Overview
                     </h6>
                     <div class="dropdown no-arrow">
                       <a
@@ -640,13 +669,10 @@
                         class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                         aria-labelledby="dropdownMenuLink"
                       >
-                        <div class="dropdown-header">Dropdown Header:</div>
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"
-                          >Something else here</a
-                        >
+                        <div class="dropdown-header">Additional Info:</div>
+                        <a class="dropdown-item" href="#">Yearly</a>
+                        <a class="dropdown-item" href="#">Monthly</a>
+                        <a class="dropdown-item" href="#">Weekly</a>
                       </div>
                     </div>
                   </div>
@@ -667,7 +693,7 @@
                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
                   >
                     <h6 class="m-0 font-weight-bold text-primary">
-                      Revenue Sources
+                      Customers Demographic
                     </h6>
                     <div class="dropdown no-arrow">
                       <a
@@ -687,13 +713,11 @@
                         class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                         aria-labelledby="dropdownMenuLink"
                       >
-                        <div class="dropdown-header">Dropdown Header:</div>
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"
-                          >Something else here</a
-                        >
+                        <div class="dropdown-header">Additional Info:</div>
+                        <a class="dropdown-item" href="#">Current</a>
+                        <a class="dropdown-item" href="#">Past 30 days</a>
+                        <a class="dropdown-item" href="#">Past 90 days</a>
+                        <a class="dropdown-item" href="#">Past 365 days</a>
                       </div>
                     </div>
                   </div>
@@ -704,13 +728,13 @@
                     </div>
                     <div class="mt-4 text-center small">
                       <span class="mr-2">
-                        <i class="fas fa-circle text-primary"></i> Direct
+                        <i class="fas fa-circle text-primary"></i> BEC
                       </span>
                       <span class="mr-2">
-                        <i class="fas fa-circle text-success"></i> Social
+                        <i class="fas fa-circle text-success"></i> TIC
                       </span>
                       <span class="mr-2">
-                        <i class="fas fa-circle text-info"></i> Referral
+                        <i class="fas fa-circle text-info"></i> BJC
                       </span>
                     </div>
                   </div>
@@ -725,198 +749,157 @@
                 <!-- Project Card Example -->
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Columns</h6>
                   </div>
                   <div class="card-body">
                     <h4 class="small font-weight-bold">
-                      Server Migration <span class="float-right">20%</span>
-                    </h4>
-                    <div class="progress mb-4">
-                      <div
-                        class="progress-bar bg-danger"
-                        role="progressbar"
-                        style="width: 20%"
-                        aria-valuenow="20"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                    <h4 class="small font-weight-bold">
-                      Sales Tracking <span class="float-right">40%</span>
+                      Column A <span class="float-right">6%</span>
                     </h4>
                     <div class="progress mb-4">
                       <div
                         class="progress-bar bg-warning"
                         role="progressbar"
-                        style="width: 40%"
-                        aria-valuenow="40"
+                        style="width: 6%"
+                        aria-valuenow="6"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
                     </div>
                     <h4 class="small font-weight-bold">
-                      Customer Database <span class="float-right">60%</span>
+                      Column B <span class="float-right">5%</span>
                     </h4>
                     <div class="progress mb-4">
                       <div
-                        class="progress-bar"
+                        class="progress-bar bg-warning"
                         role="progressbar"
-                        style="width: 60%"
-                        aria-valuenow="60"
+                        style="width: 5%"
+                        aria-valuenow="5"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
                     </div>
                     <h4 class="small font-weight-bold">
-                      Payout Details <span class="float-right">80%</span>
+                      Column C <span class="float-right">3%</span>
                     </h4>
                     <div class="progress mb-4">
                       <div
-                        class="progress-bar bg-info"
+                        class="progress-bar bg-warning"
                         role="progressbar"
-                        style="width: 80%"
-                        aria-valuenow="80"
+                        style="width: 3%"
+                        aria-valuenow="3"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
                     </div>
                     <h4 class="small font-weight-bold">
-                      Account Setup <span class="float-right">Complete!</span>
+                      Column D <span class="float-right">5%</span>
+                    </h4>
+                    <div class="progress mb-4">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        style="width: 5%"
+                        aria-valuenow="5"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <h4 class="small font-weight-bold">
+                      Column E <span class="float-right">1%</span>
+                    </h4>
+                    <div class="progress mb-4">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        style="width: 1%"
+                        aria-valuenow="1"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <h4 class="small font-weight-bold">
+                      Column F <span class="float-right">0%</span>
+                    </h4>
+                    <div class="progress mb-4">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        style="width: 0%"
+                        aria-valuenow="0"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <h4 class="small font-weight-bold">
+                      Column G <span class="float-right">0%</span>
+                    </h4>
+                    <div class="progress mb-4">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        style="width: 0%"
+                        aria-valuenow="0"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <h4 class="small font-weight-bold">
+                      Column H <span class="float-right">0%</span>
                     </h4>
                     <div class="progress">
                       <div
-                        class="progress-bar bg-success"
+                        class="progress-bar bg-warning"
                         role="progressbar"
-                        style="width: 100%"
-                        aria-valuenow="100"
+                        style="width: 0%"
+                        aria-valuenow="0"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Color System -->
-                <div class="row">
-                  <div class="col-lg-6 mb-4">
-                    <div class="card bg-primary text-white shadow">
-                      <div class="card-body">
-                        Primary
-                        <div class="text-white-50 small">#4e73df</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 mb-4">
-                    <div class="card bg-success text-white shadow">
-                      <div class="card-body">
-                        Success
-                        <div class="text-white-50 small">#1cc88a</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 mb-4">
-                    <div class="card bg-info text-white shadow">
-                      <div class="card-body">
-                        Info
-                        <div class="text-white-50 small">#36b9cc</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 mb-4">
-                    <div class="card bg-warning text-white shadow">
-                      <div class="card-body">
-                        Warning
-                        <div class="text-white-50 small">#f6c23e</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 mb-4">
-                    <div class="card bg-danger text-white shadow">
-                      <div class="card-body">
-                        Danger
-                        <div class="text-white-50 small">#e74a3b</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 mb-4">
-                    <div class="card bg-secondary text-white shadow">
-                      <div class="card-body">
-                        Secondary
-                        <div class="text-white-50 small">#858796</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 mb-4">
-                    <div class="card bg-light text-black shadow">
-                      <div class="card-body">
-                        Light
-                        <div class="text-black-50 small">#f8f9fc</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 mb-4">
-                    <div class="card bg-dark text-white shadow">
-                      <div class="card-body">
-                        Dark
-                        <div class="text-white-50 small">#5a5c69</div>
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <div class="col-lg-6 mb-4">
-                <!-- Illustrations -->
-                <div class="card shadow mb-4">
-                  <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">
-                      Illustrations
-                    </h6>
-                  </div>
-                  <div class="card-body">
-                    <div class="text-center">
-                      <img
-                        class="img-fluid px-3 px-sm-4 mt-3 mb-4"
-                        style="width: 25rem"
-                        src="img/undraw_posting_photo.svg"
-                        alt="..."
-                      />
-                    </div>
-                    <p>
-                      Add some quality, svg illustrations to your project
-                      courtesy of
-                      <a
-                        target="_blank"
-                        rel="nofollow"
-                        href="https://undraw.co/"
-                        >unDraw</a
-                      >, a constantly updated collection of beautiful svg images
-                      that you can use completely free and without attribution!
-                    </p>
-                    <a target="_blank" rel="nofollow" href="https://undraw.co/"
-                      >Browse Illustrations on unDraw &rarr;</a
-                    >
-                  </div>
-                </div>
-
+              <div class="col-lg-6">
                 <!-- Approach -->
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">
-                      Development Approach
+                      Warehouse Description
                     </h6>
                   </div>
                   <div class="card-body">
                     <p>
-                      SB Admin 2 makes extensive use of Bootstrap 4 utility
-                      classes in order to reduce CSS bloat and poor page
-                      performance. Custom CSS classes are used to create custom
-                      components and custom utility classes.
+                      EIU Smart Warehouse is a project created with the purpose
+                      of managing various technologies in order to showcase the
+                      foundation and an experiment model for providing solutions
+                      to increase efficiency in storage capabilities, pushing
+                      for a positive change within logistics.
+                    </p>
+                    <p>
+                      Within the Smart Warehouse, many pioneering technologies
+                      of the 4.0 era are implemented and utilized such as RFID,
+                      moving automatons, AI algorithms and Warehouse Management
+                      Software (WMS).
                     </p>
                     <p class="mb-0">
-                      Before working with this theme, you should become familiar
-                      with the Bootstrap framework, especially the utility
-                      classes.
+                      The main activities of the Smart Warehouse can be listed
+                      as follows:
+                    </p>
+                    <p class="mb-0">
+                      - Using the WMS and the AI algorithms, orders are given
+                      designated RFIDs for each pallets that are imported.
+                    </p>
+                    <p class="mb-0">
+                      - Pallets are transported via conveyor belts and mobile
+                      automatons to their designated storage location.
+                    </p>
+                    <p class="mb-0">
+                      - The process can be done in reverse for exports, with the
+                      WMS managing the orders and the packaging of the pallets.
+                    </p>
+                    <p class="mb-0">
+                      - The WMS can also provide statistics of the Smart
+                      Warehouse for easy managing and maintenance.
                     </p>
                   </div>
                 </div>
@@ -931,7 +914,7 @@
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Your Website 2021</span>
+              <span>Copyright &copy; Your Website 2023</span>
             </div>
           </div>
         </footer>

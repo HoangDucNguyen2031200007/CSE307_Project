@@ -10,9 +10,9 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>SB Admin 2 - Animation Utilities</title>
+    <title>EIU Smart Warehouse - Products</title>
 
-    <!-- Custom fonts for this template-->
+    <!-- Custom fonts for this template -->
     <link
       href="vendor/fontawesome-free/css/all.min.css"
       rel="stylesheet"
@@ -23,8 +23,14 @@
       rel="stylesheet"
     />
 
-    <!-- Custom styles for this template-->
+    <!-- Custom styles for this template -->
     <link href="css/Home.css" rel="stylesheet" />
+
+    <!-- Custom styles for this page -->
+    <link
+      href="vendor/datatables/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body id="page-top">
@@ -38,12 +44,17 @@
         <!-- Sidebar - Brand -->
         <a
           class="sidebar-brand d-flex align-items-center justify-content-center"
-          href="index.html"
+          href="Home.html"
         >
-          <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+          <div class="sidebar-brand-icon">
+            <img
+              src="img/EIULogo.webp"
+              alt="EIULogo"
+              width="40px"
+              height="40px"
+            />
           </div>
-          <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+          <div class="sidebar-brand-text mx-3">EIU Warehouse</div>
         </a>
 
         <!-- Divider -->
@@ -51,9 +62,9 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-          <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a
+          <a class="nav-link" href="Home.html">
+            <i class="fa fa-home"></i>
+            <span>Home</span></a
           >
         </li>
 
@@ -61,120 +72,103 @@
         <hr class="sidebar-divider" />
 
         <!-- Heading -->
-        <div class="sidebar-heading">Interface</div>
-
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            href="#"
-            data-toggle="collapse"
-            data-target="#collapseTwo"
-            aria-expanded="true"
-            aria-controls="collapseTwo"
-          >
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Components</span>
-          </a>
-          <div
-            id="collapseTwo"
-            class="collapse"
-            aria-labelledby="headingTwo"
-            data-parent="#accordionSidebar"
-          >
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Custom Components:</h6>
-              <a class="collapse-item" href="buttons.html">Buttons</a>
-              <a class="collapse-item" href="cards.html">Cards</a>
-            </div>
-          </div>
-        </li>
-
-        <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item active">
-          <a
-            class="nav-link"
-            href="#"
-            data-toggle="collapse"
-            data-target="#collapseUtilities"
-            aria-expanded="true"
-            aria-controls="collapseUtilities"
-          >
-            <i class="fas fa-fw fa-wrench"></i>
-            <span>Utilities</span>
-          </a>
-          <div
-            id="collapseUtilities"
-            class="collapse show"
-            aria-labelledby="headingUtilities"
-            data-parent="#accordionSidebar"
-          >
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Custom Utilities:</h6>
-              <a class="collapse-item" href="utilities-color.html">Colors</a>
-              <a class="collapse-item" href="utilities-border.html">Borders</a>
-              <a class="collapse-item active" href="utilities-animation.html"
-                >Animations</a
-              >
-              <a class="collapse-item" href="utilities-other.html">Other</a>
-            </div>
-          </div>
-        </li>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider" />
-
-        <!-- Heading -->
-        <div class="sidebar-heading">Addons</div>
-
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            href="#"
-            data-toggle="collapse"
-            data-target="#collapsePages"
-            aria-expanded="true"
-            aria-controls="collapsePages"
-          >
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
-          </a>
-          <div
-            id="collapsePages"
-            class="collapse"
-            aria-labelledby="headingPages"
-            data-parent="#accordionSidebar"
-          >
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Login Screens:</h6>
-              <a class="collapse-item" href="login.html">Login</a>
-              <a class="collapse-item" href="register.html">Register</a>
-              <a class="collapse-item" href="forgot-password.html"
-                >Forgot Password</a
-              >
-              <div class="collapse-divider"></div>
-              <h6 class="collapse-header">Other Pages:</h6>
-              <a class="collapse-item" href="404.html">404 Page</a>
-              <a class="collapse-item" href="blank.html">Blank Page</a>
-            </div>
-          </div>
-        </li>
+        <div class="sidebar-heading">Tables</div>
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
           <a class="nav-link" href="charts.html">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a
+            <span>Statistics</span></a
           >
         </li>
 
         <!-- Nav Item - Tables -->
-        <li class="nav-item">
-          <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a
+        <li class="nav-item active">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseProducts"
+            aria-expanded="true"
+            aria-controls="collapseProducts"
           >
+            <i class="fa fa-database" aria-hidden="true"></i>
+            <span>Products</span>
+          </a>
+          <div
+            id="collapseProducts"
+            class="collapse"
+            aria-labelledby="headingProducts"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="tables1.html">Product List</a>
+              <a class="collapse-item" href="newProduct.html"
+                >Add new Product</a
+              >
+              <a class="collapse-item" href="updateProduct.html"
+                >Update Product</a
+              >
+            </div>
+          </div>
+        </li>
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseCustomers"
+            aria-expanded="true"
+            aria-controls="collapseCustomers"
+          >
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            <span>Customers</span>
+          </a>
+          <div
+            id="collapseCustomers"
+            class="collapse"
+            aria-labelledby="headingCustomers"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="tables2.html">Customer List</a>
+              <a class="collapse-item" href="newCustomer.html"
+                >Add new Customer</a
+              >
+              <a class="collapse-item" href="updateCustomer.html"
+                >Update Customer</a
+              >
+            </div>
+          </div>
+        </li>
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseWarehouse"
+            aria-expanded="true"
+            aria-controls="collapseWarehouse"
+          >
+            <i class="fas fa-fw fa-table"></i>
+            <span>Warehouse</span>
+          </a>
+          <div
+            id="collapseWarehouse"
+            class="collapse"
+            aria-labelledby="headingWarehouse"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="tables3.html">Warehouse</a>
+              <a class="collapse-item" href="newBlock.html">Add new Block</a>
+              <a class="collapse-item" href="updateBlock.html">Update Block</a>
+            </div>
+          </div>
         </li>
 
         <!-- Divider -->
@@ -196,12 +190,14 @@
             class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
           >
             <!-- Sidebar Toggle (Topbar) -->
-            <button
-              id="sidebarToggleTop"
-              class="btn btn-link d-md-none rounded-circle mr-3"
-            >
-              <i class="fa fa-bars"></i>
-            </button>
+            <form class="form-inline">
+              <button
+                id="sidebarToggleTop"
+                class="btn btn-link d-md-none rounded-circle mr-3"
+              >
+                <i class="fa fa-bars"></i>
+              </button>
+            </form>
 
             <!-- Topbar Search -->
             <form
@@ -290,7 +286,7 @@
                       </div>
                     </div>
                     <div>
-                      <div class="small text-gray-500">December 12, 2019</div>
+                      <div class="small text-gray-500">December 12, 2023</div>
                       <span class="font-weight-bold"
                         >A new monthly report is ready to download!</span
                       >
@@ -303,7 +299,7 @@
                       </div>
                     </div>
                     <div>
-                      <div class="small text-gray-500">December 7, 2019</div>
+                      <div class="small text-gray-500">December 7, 2023</div>
                       $290.29 has been deposited into your account!
                     </div>
                   </a>
@@ -314,7 +310,7 @@
                       </div>
                     </div>
                     <div>
-                      <div class="small text-gray-500">December 2, 2019</div>
+                      <div class="small text-gray-500">December 2, 2023</div>
                       Spending Alert: We've noticed unusually high spending for
                       your account.
                     </div>
@@ -441,7 +437,7 @@
                   aria-expanded="false"
                 >
                   <span class="mr-2 d-none d-lg-inline text-gray-600 small"
-                    >Douglas McGee</span
+                    >Nguyen Hoang Duc</span
                   >
                   <img
                     class="img-profile rounded-circle"
@@ -486,149 +482,56 @@
           <!-- Begin Page Content -->
           <div class="container-fluid">
             <!-- Page Heading -->
-            <h1 class="h3 mb-1 text-gray-800">Animation Utilities</h1>
-            <p class="mb-4">
-              Bootstrap's default utility classes can be found on the official
-              <a href="https://getbootstrap.com/docs"
-                >Bootstrap Documentation</a
-              >
-              page. The custom utilities below were created to extend this theme
-              past the default utility classes built into Bootstrap's framework.
-            </p>
-
-            <!-- Content Row -->
-            <div class="row">
-              <!-- Grow In Utility -->
-              <div class="col-lg-6">
-                <div class="card position-relative">
-                  <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">
-                      Grow In Animation Utilty
-                    </h6>
-                  </div>
-                  <div class="card-body">
-                    <div class="mb-3">
-                      <code>.animated--grow-in</code>
-                    </div>
-                    <div class="small mb-1">Navbar Dropdown Example:</div>
-                    <nav
-                      class="navbar navbar-expand navbar-light bg-light mb-4"
-                    >
-                      <a class="navbar-brand" href="#">Navbar</a>
-                      <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown">
-                          <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdown"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            Dropdown
-                          </a>
-                          <div
-                            class="dropdown-menu dropdown-menu-right animated--grow-in"
-                            aria-labelledby="navbarDropdown"
-                          >
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
-                            >
-                          </div>
-                        </li>
-                      </ul>
-                    </nav>
-                    <p class="mb-0 small">
-                      Note: This utility animates the CSS transform property,
-                      meaning it will override any existing transforms on an
-                      element being animated! In this theme, the grow in
-                      animation is only being used on dropdowns within the
-                      navbar.
-                    </p>
-                  </div>
-                </div>
+            <h1 class="h3 mb-4 text-gray-800">New Product</h1>
+            <form action="tables1.html" method="POST">
+              <div class="mb-3">
+                <label for="productCode" class="form-label"
+                  >Product Code:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="productCode"
+                  name="productCode"
+                />
               </div>
-
-              <!-- Fade In Utility -->
-              <div class="col-lg-6">
-                <div class="card position-relative">
-                  <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">
-                      Fade In Animation Utilty
-                    </h6>
-                  </div>
-                  <div class="card-body">
-                    <div class="mb-3">
-                      <code>.animated--fade-in</code>
-                    </div>
-                    <div class="small mb-1">Navbar Dropdown Example:</div>
-                    <nav
-                      class="navbar navbar-expand navbar-light bg-light mb-4"
-                    >
-                      <a class="navbar-brand" href="#">Navbar</a>
-                      <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown">
-                          <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdown"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            Dropdown
-                          </a>
-                          <div
-                            class="dropdown-menu dropdown-menu-right animated--fade-in"
-                            aria-labelledby="navbarDropdown"
-                          >
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
-                            >
-                          </div>
-                        </li>
-                      </ul>
-                    </nav>
-                    <div class="small mb-1">Dropdown Button Example:</div>
-                    <div class="dropdown mb-4">
-                      <button
-                        class="btn btn-primary dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        Dropdown
-                      </button>
-                      <div
-                        class="dropdown-menu animated--fade-in"
-                        aria-labelledby="dropdownMenuButton"
-                      >
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#"
-                          >Something else here</a
-                        >
-                      </div>
-                    </div>
-                    <p class="mb-0 small">
-                      Note: This utility animates the CSS opacity property,
-                      meaning it will override any existing opacity on an
-                      element being animated!
-                    </p>
-                  </div>
-                </div>
+              <div class="mb-3">
+                <label for="productName" class="form-label"
+                  >Product Name:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="productName"
+                  name="productName"
+                />
               </div>
-            </div>
+              <div class="mb-3">
+                <label for="customerID" class="form-label"
+                  >Customer Code:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="customerID"
+                  name="customerID"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="status" class="form-label">Status:</label><br />
+                <select
+                  class="form-select form-select-lg"
+                  name="status"
+                  aria-label="Default select example"
+                  id="status"
+                >
+                  <option selected>--- && ---</option>
+                  <option value="OK">OK</option>
+                  <option value="WAITING">WAITING</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
           </div>
           <!-- /.container-fluid -->
         </div>
@@ -638,7 +541,7 @@
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Your Website 2020</span>
+              <span>Copyright &copy; Your Website 2023</span>
             </div>
           </div>
         </footer>
@@ -701,5 +604,12 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
   </body>
 </html>

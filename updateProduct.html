@@ -10,9 +10,9 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>SB Admin 2 - Blank</title>
+    <title>EIU Smart Warehouse - Products</title>
 
-    <!-- Custom fonts for this template-->
+    <!-- Custom fonts for this template -->
     <link
       href="vendor/fontawesome-free/css/all.min.css"
       rel="stylesheet"
@@ -23,8 +23,14 @@
       rel="stylesheet"
     />
 
-    <!-- Custom styles for this template-->
+    <!-- Custom styles for this template -->
     <link href="css/Home.css" rel="stylesheet" />
+
+    <!-- Custom styles for this page -->
+    <link
+      href="vendor/datatables/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body id="page-top">
@@ -38,12 +44,17 @@
         <!-- Sidebar - Brand -->
         <a
           class="sidebar-brand d-flex align-items-center justify-content-center"
-          href="index.html"
+          href="Home.html"
         >
-          <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+          <div class="sidebar-brand-icon">
+            <img
+              src="img/EIULogo.webp"
+              alt="EIULogo"
+              width="40px"
+              height="40px"
+            />
           </div>
-          <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+          <div class="sidebar-brand-text mx-3">EIU Warehouse</div>
         </a>
 
         <!-- Divider -->
@@ -51,9 +62,9 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-          <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a
+          <a class="nav-link" href="Home.html">
+            <i class="fa fa-home"></i>
+            <span>Home</span></a
           >
         </li>
 
@@ -61,120 +72,103 @@
         <hr class="sidebar-divider" />
 
         <!-- Heading -->
-        <div class="sidebar-heading">Interface</div>
-
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            href="#"
-            data-toggle="collapse"
-            data-target="#collapseTwo"
-            aria-expanded="true"
-            aria-controls="collapseTwo"
-          >
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Components</span>
-          </a>
-          <div
-            id="collapseTwo"
-            class="collapse"
-            aria-labelledby="headingTwo"
-            data-parent="#accordionSidebar"
-          >
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Custom Components:</h6>
-              <a class="collapse-item" href="buttons.html">Buttons</a>
-              <a class="collapse-item" href="cards.html">Cards</a>
-            </div>
-          </div>
-        </li>
-
-        <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            href="#"
-            data-toggle="collapse"
-            data-target="#collapseUtilities"
-            aria-expanded="true"
-            aria-controls="collapseUtilities"
-          >
-            <i class="fas fa-fw fa-wrench"></i>
-            <span>Utilities</span>
-          </a>
-          <div
-            id="collapseUtilities"
-            class="collapse"
-            aria-labelledby="headingUtilities"
-            data-parent="#accordionSidebar"
-          >
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Custom Utilities:</h6>
-              <a class="collapse-item" href="utilities-color.html">Colors</a>
-              <a class="collapse-item" href="utilities-border.html">Borders</a>
-              <a class="collapse-item" href="utilities-animation.html"
-                >Animations</a
-              >
-              <a class="collapse-item" href="utilities-other.html">Other</a>
-            </div>
-          </div>
-        </li>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider" />
-
-        <!-- Heading -->
-        <div class="sidebar-heading">Addons</div>
-
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item active">
-          <a
-            class="nav-link"
-            href="#"
-            data-toggle="collapse"
-            data-target="#collapsePages"
-            aria-expanded="true"
-            aria-controls="collapsePages"
-          >
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
-          </a>
-          <div
-            id="collapsePages"
-            class="collapse show"
-            aria-labelledby="headingPages"
-            data-parent="#accordionSidebar"
-          >
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Login Screens:</h6>
-              <a class="collapse-item" href="login.html">Login</a>
-              <a class="collapse-item" href="register.html">Register</a>
-              <a class="collapse-item" href="forgot-password.html"
-                >Forgot Password</a
-              >
-              <div class="collapse-divider"></div>
-              <h6 class="collapse-header">Other Pages:</h6>
-              <a class="collapse-item" href="404.html">404 Page</a>
-              <a class="collapse-item active" href="blank.html">Blank Page</a>
-            </div>
-          </div>
-        </li>
+        <div class="sidebar-heading">Tables</div>
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
           <a class="nav-link" href="charts.html">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a
+            <span>Statistics</span></a
           >
         </li>
 
         <!-- Nav Item - Tables -->
-        <li class="nav-item">
-          <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a
+        <li class="nav-item active">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseProducts"
+            aria-expanded="true"
+            aria-controls="collapseProducts"
           >
+            <i class="fa fa-database" aria-hidden="true"></i>
+            <span>Products</span>
+          </a>
+          <div
+            id="collapseProducts"
+            class="collapse"
+            aria-labelledby="headingProducts"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="tables1.html">Product List</a>
+              <a class="collapse-item" href="newProduct.html"
+                >Add new Product</a
+              >
+              <a class="collapse-item" href="updateProduct.html"
+                >Update Product</a
+              >
+            </div>
+          </div>
+        </li>
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseCustomers"
+            aria-expanded="true"
+            aria-controls="collapseCustomers"
+          >
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            <span>Customers</span>
+          </a>
+          <div
+            id="collapseCustomers"
+            class="collapse"
+            aria-labelledby="headingCustomers"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="tables2.html">Customer List</a>
+              <a class="collapse-item" href="newCustomer.html"
+                >Add new Customer</a
+              >
+              <a class="collapse-item" href="updateCustomer.html"
+                >Update Customer</a
+              >
+            </div>
+          </div>
+        </li>
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseWarehouse"
+            aria-expanded="true"
+            aria-controls="collapseWarehouse"
+          >
+            <i class="fas fa-fw fa-table"></i>
+            <span>Warehouse</span>
+          </a>
+          <div
+            id="collapseWarehouse"
+            class="collapse"
+            aria-labelledby="headingWarehouse"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="tables3.html">Warehouse</a>
+              <a class="collapse-item" href="newBlock.html">Add new Block</a>
+              <a class="collapse-item" href="updateBlock.html">Update Block</a>
+            </div>
+          </div>
         </li>
 
         <!-- Divider -->
@@ -196,12 +190,14 @@
             class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
           >
             <!-- Sidebar Toggle (Topbar) -->
-            <button
-              id="sidebarToggleTop"
-              class="btn btn-link d-md-none rounded-circle mr-3"
-            >
-              <i class="fa fa-bars"></i>
-            </button>
+            <form class="form-inline">
+              <button
+                id="sidebarToggleTop"
+                class="btn btn-link d-md-none rounded-circle mr-3"
+              >
+                <i class="fa fa-bars"></i>
+              </button>
+            </form>
 
             <!-- Topbar Search -->
             <form
@@ -290,7 +286,7 @@
                       </div>
                     </div>
                     <div>
-                      <div class="small text-gray-500">December 12, 2019</div>
+                      <div class="small text-gray-500">December 12, 2023</div>
                       <span class="font-weight-bold"
                         >A new monthly report is ready to download!</span
                       >
@@ -303,7 +299,7 @@
                       </div>
                     </div>
                     <div>
-                      <div class="small text-gray-500">December 7, 2019</div>
+                      <div class="small text-gray-500">December 7, 2023</div>
                       $290.29 has been deposited into your account!
                     </div>
                   </a>
@@ -314,7 +310,7 @@
                       </div>
                     </div>
                     <div>
-                      <div class="small text-gray-500">December 2, 2019</div>
+                      <div class="small text-gray-500">December 2, 2023</div>
                       Spending Alert: We've noticed unusually high spending for
                       your account.
                     </div>
@@ -441,7 +437,7 @@
                   aria-expanded="false"
                 >
                   <span class="mr-2 d-none d-lg-inline text-gray-600 small"
-                    >Douglas McGee</span
+                    >Nguyen Hoang Duc</span
                   >
                   <img
                     class="img-profile rounded-circle"
@@ -486,7 +482,88 @@
           <!-- Begin Page Content -->
           <div class="container-fluid">
             <!-- Page Heading -->
-            <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+            <h1 class="h3 mb-4 text-gray-800">Update Product</h1>
+            <form action="tables1.html" method="POST">
+              <div class="mb-3">
+                <label for="productID" class="form-label">Product ID:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="productID"
+                  name="productID"
+                  readonly
+                />
+              </div>
+              <div class="mb-3">
+                <label for="productCode" class="form-label"
+                  >Product Code:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="productCode"
+                  name="productCode"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="productName" class="form-label"
+                  >Product Name:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="productName"
+                  name="productName"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="customerCode" class="form-label"
+                  >Customer Code:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="customerCode"
+                  name="customerCode"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="RFID" class="form-label">RFID:</label>
+                <input type="text" class="form-control" id="RFID" name="RFID" />
+              </div>
+              <div class="mb-3">
+                <select
+                  class="form-select form-select-lg"
+                  name="status"
+                  aria-label="Default select example"
+                >
+                  <option selected>--- && ---</option>
+                  <option value="OK">OK</option>
+                  <option value="WAITING">WAITING</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="inTime" class="form-label">Import Time:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inTime"
+                  name="inTime"
+                  placeholder="dd-MM-yyyy hh:mm:ss"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="outTime" class="form-label">Export Time:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="outTime"
+                  name="outTime"
+                  placeholder="dd-MM-yyyy hh:mm:ss"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
           </div>
           <!-- /.container-fluid -->
         </div>
@@ -496,7 +573,7 @@
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Your Website 2020</span>
+              <span>Copyright &copy; Your Website 2023</span>
             </div>
           </div>
         </footer>
@@ -559,5 +636,12 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
   </body>
 </html>

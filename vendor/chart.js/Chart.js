@@ -342,9 +342,6 @@ convert.rgb.cmyk = function (rgb) {
 	return [c * 100, m * 100, y * 100, k * 100];
 };
 
-/**
- * See https://en.m.wikipedia.org/wiki/Euclidean_distance#Squared_Euclidean_distance
- * */
 function comparativeDistance(x, y) {
 	return (
 		Math.pow(x[0] - y[0], 2) +
